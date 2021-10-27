@@ -1,12 +1,12 @@
 {
   "manifest_version": 2,
   "name": "Name & Address column",
-  "description": "Combines Name and E-mail address together.",
+  "description": "Combines Name and E-mail address together in one column.",
   "version": "1.0.0",
   "author": "Łukasz Kosson & Savasdotexe",
   "applications": {
     "gecko": {
-      "id": "Savasdotexe@outlook.com",
+      "id": "savasdotexe@outlook.com",
       "strict_min_version": "68.0a1"
     }
   },
