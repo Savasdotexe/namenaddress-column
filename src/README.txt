@@ -1,9 +1,6 @@
-Full address column
+Name & Address column
 ===================
 
-This add-on adds two new columns called "Sender (@)" and "Recipient (@)" in 
-message list containing full, raw addresses of sender and recipient instead 
-of just names like in default columns.
+This add-on adds a new column called "Sender (@)" in message list containing full and raw address of sender to try and slim down the columns.
 
-This add-on is reimplementation of "Show address only" which stopped working 
-in Thunderbird 78. This add-on source is based on "SFreq" by Jorg K.
+Forked from 'Full address column' add-on, by lkosson.
