@@ -5,7 +5,7 @@ var { Services } = ChromeUtils.import("resource://gre/modules/Services.jsm");
 
 var MSG_VIEW_FLAG_DUMMY = 0x20000000;
 
-const senderColumnHandler = {
+const senderColumnHandler = { echo "xx",
   init(win) { this.win = win; },
   getCellText(row, col) { return this.isDummy(row) ? "" : this.getAddress(this.win.gDBView.getMsgHdrAt(row)); },
   getSortStringForRow(hdr) { return this.getAddress(hdr); },
