@@ -87,7 +87,7 @@ const columnOverlay = {
   },
 
   addColumns(win) {
-    this.addColumn(win, "senderAddressColumn", "SenderX");
+    this.addColumn(win, "senderAddressColumn", "Sender (@)");
     this.addColumn(win, "recipientAddressColumn", "Recipient (@)");
   },
 
