@@ -14,6 +14,7 @@ const senderColumnHandler = {
   getRowProperties(row, props) {},
   getImageSrc(row, col) { return null; },
   getSortLongForRow(hdr) { return 0; },
+  // getAddress(aHeader) { return aHeader.author.replace(/.*</, "").replace(/>.*/, ""); },
   getAddress(aHeader) { return aHeader.author; },
   isDummy(row) { return (this.win.gDBView.getFlagsAt(row) & MSG_VIEW_FLAG_DUMMY) != 0; }
 };
@@ -27,6 +28,7 @@ const recipientColumnHandler = {
   getRowProperties(row, props) {},
   getImageSrc(row, col) { return null; },
   getSortLongForRow(hdr) { return 0; },
+  // formatAddress(acc, val) { return (acc == "" ? "" : acc + ", ") + (val.includes(">") ? [...val.matchAll(/[^<]+(?=>)/g)].join(', ') : val); },
   formatAddress(acc, val) { return (acc == "" ? "" : acc + ", ") + (val.includes(">") ? val + " (" + [...val.matchAll(/[^<]+(?=>)/g)].join(', ') + ")" : val); },
   getAddress(aHeader) { return aHeader.recipients.split(',').reduce(this.formatAddress, ""); },
   isDummy(row) { return (this.win.gDBView.getFlagsAt(row) & MSG_VIEW_FLAG_DUMMY) != 0; }
@@ -87,7 +89,7 @@ const columnOverlay = {
   },
 
   addColumns(win) {
-    this.addColumn(win, "senderAddressColumn", "Sender (@)");
+    this.addColumn(win, "senderAddressColumn", "From+");
     this.addColumn(win, "recipientAddressColumn", "Recipient (@)");
   },
 
