@@ -6,7 +6,7 @@
   "author": "Łukasz Kosson & Savasdotexe",
   "applications": {
     "gecko": {
-      "id": "namenaddress-column@outlook.com",
+      "id": "full-address-column@lukasz.kosson.net",
       "strict_min_version": "68.0a1"
     }
   },
